@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "d6e47d45-638a-4e00-b104-57ed6d282fac",
+		"name": "Priyanshu_Idea_Usher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17577092"
+	},
+	"item": [
+		{
+			"name": "CreatePosts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Test 4 big\",\n    \"desc\":\"Description text for testing bombay\",\n    \"image\":\"imageBase64\",\n    \"author\":\"Priyanshu Mishra\",\n    \"tags\":[\"65dcab6955e3601713c97747\",\"65dcab85cb6174f576b77c5b\",\"65dcab6955e3601713c97747\",\"65dcb34f277bb6305f2300b6\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}/post"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Tag new\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{BASE_URL}}/tag"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{BASE_URL}}/tag"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/post?page=1&limit=10&sortOrder=asc",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "kiwi",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "tag",
+							"value": "65dcb34f277bb6305f2300b6",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "updatedAt",
+							"disabled": true
+						},
+						{
+							"key": "sortOrder",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "localhost:3000"
+		}
+	]
+}
