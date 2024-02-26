@@ -1,0 +1,43 @@
+.pageContainer {
+  margin: 100px 0px;
+  padding: 0px;
+}
+
+.blogsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media all and (min-width: 1100px) {
+  .blogsContainer {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.paginationComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.paginationComponent > button {
+  width: 100px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+}
